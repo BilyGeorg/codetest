@@ -1,0 +1,234 @@
+{
+    "AK": {
+        "Projects": 43,
+        "TotalGrantsAmount": 5062391.4
+    },
+    "AL": {
+        "Projects": 47,
+        "TotalGrantsAmount": 2931942.53
+    },
+    "AR": {
+        "Projects": 43,
+        "TotalGrantsAmount": 3857940.23
+    },
+    "AS": {
+        "Projects": 4,
+        "TotalGrantsAmount": 1510870.0
+    },
+    "AZ": {
+        "Projects": 79,
+        "TotalGrantsAmount": 8033723.72
+    },
+    "CA": {
+        "Projects": 687,
+        "TotalGrantsAmount": 73721428.93
+    },
+    "CO": {
+        "Projects": 98,
+        "TotalGrantsAmount": 10847393.74
+    },
+    "CT": {
+        "Projects": 149,
+        "TotalGrantsAmount": 14135624.4
+    },
+    "DC": {
+        "Projects": 202,
+        "TotalGrantsAmount": 24016411.46
+    },
+    "DE": {
+        "Projects": 43,
+        "TotalGrantsAmount": 5444789.87
+    },
+    "FL": {
+        "Projects": 164,
+        "TotalGrantsAmount": 10613473.66
+    },
+    "GA": {
+        "Projects": 146,
+        "TotalGrantsAmount": 14945837.98
+    },
+    "GU": {
+        "Projects": 5,
+        "TotalGrantsAmount": 905721.07
+    },
+    "HI": {
+        "Projects": 34,
+        "TotalGrantsAmount": 4790093.13
+    },
+    "IA": {
+        "Projects": 88,
+        "TotalGrantsAmount": 6395741.76
+    },
+    "ID": {
+        "Projects": 29,
+        "TotalGrantsAmount": 3362807.62
+    },
+    "IL": {
+        "Projects": 358,
+        "TotalGrantsAmount": 38420973.7
+    },
+    "IN": {
+        "Projects": 173,
+        "TotalGrantsAmount": 17110598.55
+    },
+    "KS": {
+        "Projects": 77,
+        "TotalGrantsAmount": 5068750.94
+    },
+    "KY": {
+        "Projects": 77,
+        "TotalGrantsAmount": 5539334.22
+    },
+    "LA": {
+        "Projects": 75,
+        "TotalGrantsAmount": 6202622.18
+    },
+    "MA": {
+        "Projects": 524,
+        "TotalGrantsAmount": 68019621.71
+    },
+    "MD": {
+        "Projects": 172,
+        "TotalGrantsAmount": 18949784.72
+    },
+    "ME": {
+        "Projects": 72,
+        "TotalGrantsAmount": 7351677.75
+    },
+    "MI": {
+        "Projects": 171,
+        "TotalGrantsAmount": 16200163.19
+    },
+    "MN": {
+        "Projects": 148,
+        "TotalGrantsAmount": 16041416.76
+    },
+    "MO": {
+        "Projects": 118,
+        "TotalGrantsAmount": 8208069.14
+    },
+    "MP": {
+        "Projects": 4,
+        "TotalGrantsAmount": 92829.55
+    },
+    "MS": {
+        "Projects": 55,
+        "TotalGrantsAmount": 4698418.89
+    },
+    "MT": {
+        "Projects": 49,
+        "TotalGrantsAmount": 4167340.58
+    },
+    "NC": {
+        "Projects": 203,
+        "TotalGrantsAmount": 21308771.76
+    },
+    "ND": {
+        "Projects": 19,
+        "TotalGrantsAmount": 1908514.93
+    },
+    "NE": {
+        "Projects": 52,
+        "TotalGrantsAmount": 7567805.72
+    },
+    "NH": {
+        "Projects": 48,
+        "TotalGrantsAmount": 5399231.0
+    },
+    "NJ": {
+        "Projects": 140,
+        "TotalGrantsAmount": 13534284.07
+    },
+    "NM": {
+        "Projects": 54,
+        "TotalGrantsAmount": 4026586.05
+    },
+    "NV": {
+        "Projects": 24,
+        "TotalGrantsAmount": 2404742.07
+    },
+    "NY": {
+        "Projects": 945,
+        "TotalGrantsAmount": 116677526.84
+    },
+    "OH": {
+        "Projects": 176,
+        "TotalGrantsAmount": 15037583.93
+    },
+    "OK": {
+        "Projects": 59,
+        "TotalGrantsAmount": 4309493.33
+    },
+    "OR": {
+        "Projects": 107,
+        "TotalGrantsAmount": 6501699.94
+    },
+    "PA": {
+        "Projects": 379,
+        "TotalGrantsAmount": 37442335.4
+    },
+    "PR": {
+        "Projects": 54,
+        "TotalGrantsAmount": 3130627.25
+    },
+    "RI": {
+        "Projects": 54,
+        "TotalGrantsAmount": 5943797.27
+    },
+    "SC": {
+        "Projects": 82,
+        "TotalGrantsAmount": 8571729.14
+    },
+    "SD": {
+        "Projects": 26,
+        "TotalGrantsAmount": 1346657.0
+    },
+    "TN": {
+        "Projects": 106,
+        "TotalGrantsAmount": 8158919.77
+    },
+    "TX": {
+        "Projects": 301,
+        "TotalGrantsAmount": 20684495.85
+    },
+    "UT": {
+        "Projects": 58,
+        "TotalGrantsAmount": 3091626.95
+    },
+    "Un": {
+        "Projects": 8,
+        "TotalGrantsAmount": 256800.0
+    },
+    "VA": {
+        "Projects": 304,
+        "TotalGrantsAmount": 38419035.13
+    },
+    "VI": {
+        "Projects": 8,
+        "TotalGrantsAmount": 768434.0
+    },
+    "VT": {
+        "Projects": 57,
+        "TotalGrantsAmount": 3957058.26
+    },
+    "WA": {
+        "Projects": 102,
+        "TotalGrantsAmount": 10382686.83
+    },
+    "WI": {
+        "Projects": 112,
+        "TotalGrantsAmount": 10854174.48
+    },
+    "WV": {
+        "Projects": 29,
+        "TotalGrantsAmount": 1919400.07
+    },
+    "WY": {
+        "Projects": 30,
+        "TotalGrantsAmount": 2720143.0
+    },
+    "ZZ": {
+        "Projects": 39,
+        "TotalGrantsAmount": 2558431.08
+    }
+}
