@@ -1,0 +1,24 @@
+{
+    "path_to_file":"/input/neh-grants-2010-2019-csv-1.csv",
+    "db_file_loc":"/db/Grants.db",
+    "table_name":"GRANTS",
+    "generic_query":"/db/generic_query.sql",
+    "dtypes_map" : {
+        "object":"text",
+        "int8":"integer",
+        "int32":"integer",    
+        "int64":"integer",
+        "float64":"real"
+    },
+    "queries":{
+        "Participants":{
+            "name":"Participants"
+        },
+        "Supplements":{
+            "name":"Supplements"
+        },
+        "Projects":{
+            "name":"Projects"
+        }
+    }
+}

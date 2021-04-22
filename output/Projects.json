@@ -1,0 +1,234 @@
+{
+    "AK": {
+        "Projects": 43,
+        "AmountSum": 11245984.4
+    },
+    "AL": {
+        "Projects": 47,
+        "AmountSum": 9024462.53
+    },
+    "AR": {
+        "Projects": 43,
+        "AmountSum": 9828320.23
+    },
+    "AS": {
+        "Projects": 4,
+        "AmountSum": 2825005.0
+    },
+    "AZ": {
+        "Projects": 79,
+        "AmountSum": 15028604.22
+    },
+    "CA": {
+        "Projects": 687,
+        "AmountSum": 93317340.61
+    },
+    "CO": {
+        "Projects": 98,
+        "AmountSum": 17314034.0
+    },
+    "CT": {
+        "Projects": 149,
+        "AmountSum": 21150065.26
+    },
+    "DC": {
+        "Projects": 202,
+        "AmountSum": 28873434.46
+    },
+    "DE": {
+        "Projects": 43,
+        "AmountSum": 10795728.61
+    },
+    "FL": {
+        "Projects": 164,
+        "AmountSum": 22189313.66
+    },
+    "GA": {
+        "Projects": 146,
+        "AmountSum": 21142278.9
+    },
+    "GU": {
+        "Projects": 5,
+        "AmountSum": 3809538.93
+    },
+    "HI": {
+        "Projects": 34,
+        "AmountSum": 10494947.87
+    },
+    "IA": {
+        "Projects": 88,
+        "AmountSum": 12698487.76
+    },
+    "ID": {
+        "Projects": 29,
+        "AmountSum": 8962970.62
+    },
+    "IL": {
+        "Projects": 358,
+        "AmountSum": 48997431.7
+    },
+    "IN": {
+        "Projects": 173,
+        "AmountSum": 24667739.55
+    },
+    "KS": {
+        "Projects": 77,
+        "AmountSum": 10675367.94
+    },
+    "KY": {
+        "Projects": 77,
+        "AmountSum": 11339944.22
+    },
+    "LA": {
+        "Projects": 75,
+        "AmountSum": 12375712.18
+    },
+    "MA": {
+        "Projects": 524,
+        "AmountSum": 77024096.11
+    },
+    "MD": {
+        "Projects": 172,
+        "AmountSum": 26989691.72
+    },
+    "ME": {
+        "Projects": 72,
+        "AmountSum": 11532269.75
+    },
+    "MI": {
+        "Projects": 171,
+        "AmountSum": 25948949.41
+    },
+    "MN": {
+        "Projects": 148,
+        "AmountSum": 23483351.76
+    },
+    "MO": {
+        "Projects": 118,
+        "AmountSum": 20295128.14
+    },
+    "MP": {
+        "Projects": 4,
+        "AmountSum": 3276229.55
+    },
+    "MS": {
+        "Projects": 55,
+        "AmountSum": 11706390.35
+    },
+    "MT": {
+        "Projects": 49,
+        "AmountSum": 9212200.58
+    },
+    "NC": {
+        "Projects": 203,
+        "AmountSum": 28452381.72
+    },
+    "ND": {
+        "Projects": 19,
+        "AmountSum": 7575301.93
+    },
+    "NE": {
+        "Projects": 52,
+        "AmountSum": 12662175.72
+    },
+    "NH": {
+        "Projects": 48,
+        "AmountSum": 9638711.0
+    },
+    "NJ": {
+        "Projects": 140,
+        "AmountSum": 22038659.91
+    },
+    "NM": {
+        "Projects": 54,
+        "AmountSum": 9984837.05
+    },
+    "NV": {
+        "Projects": 24,
+        "AmountSum": 8220372.07
+    },
+    "NY": {
+        "Projects": 945,
+        "AmountSum": 132929763.5
+    },
+    "OH": {
+        "Projects": 176,
+        "AmountSum": 23025405.93
+    },
+    "OK": {
+        "Projects": 59,
+        "AmountSum": 9856097.33
+    },
+    "OR": {
+        "Projects": 107,
+        "AmountSum": 12316554.94
+    },
+    "PA": {
+        "Projects": 379,
+        "AmountSum": 47753006.74
+    },
+    "PR": {
+        "Projects": 54,
+        "AmountSum": 9011616.25
+    },
+    "RI": {
+        "Projects": 54,
+        "AmountSum": 10812957.27
+    },
+    "SC": {
+        "Projects": 82,
+        "AmountSum": 14461232.14
+    },
+    "SD": {
+        "Projects": 26,
+        "AmountSum": 6968912.0
+    },
+    "TN": {
+        "Projects": 106,
+        "AmountSum": 15698826.77
+    },
+    "TX": {
+        "Projects": 301,
+        "AmountSum": 34037649.85
+    },
+    "UT": {
+        "Projects": 58,
+        "AmountSum": 8507567.95
+    },
+    "Un": {
+        "Projects": 8,
+        "AmountSum": 256800.0
+    },
+    "VA": {
+        "Projects": 304,
+        "AmountSum": 47022129.51
+    },
+    "VI": {
+        "Projects": 8,
+        "AmountSum": 1779092.0
+    },
+    "VT": {
+        "Projects": 57,
+        "AmountSum": 9710470.26
+    },
+    "WA": {
+        "Projects": 102,
+        "AmountSum": 16119849.83
+    },
+    "WI": {
+        "Projects": 112,
+        "AmountSum": 18219232.48
+    },
+    "WV": {
+        "Projects": 29,
+        "AmountSum": 8267270.07
+    },
+    "WY": {
+        "Projects": 30,
+        "AmountSum": 7768583.0
+    },
+    "ZZ": {
+        "Projects": 39,
+        "AmountSum": 2930610.92
+    }
+}
