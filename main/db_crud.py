@@ -12,7 +12,7 @@ class CRUD():
         if not os.path.exists(f'{os.getcwd()}{self.config["db_file_loc"]}'):
             # Create new DB
             self.db = sqlite3.connect(f'{os.getcwd()}{self.config["db_file_loc"]}')
-            self.cussor = self.db.cusror()            
+            self.cursor = self.db.cursor()            
         else: # Connect to present DB
             self.db, self.db_cursor = self.db_connector(db_path=self.config["db_file_loc"])
 
@@ -137,9 +137,15 @@ class CRUD():
             print("DB Pipeline")
             # Generate DB and create table schema
             self.create(df=df, table_name=self.config["table_name"])
-            
+ 
             # Insert data
             self.insert(df=df, table_name=self.config["table_name"])
+
         else:
-            print("Using present DB")
-            pass
+
+            try:
+                df = self.read(sql_file=self.config["generic_query"])
+                if len(df)>0:
+                    print("Using present DB")
+            except: # Insert data
+                self.insert(df=df, table_name=self.config["table_name"])

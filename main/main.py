@@ -13,30 +13,29 @@ from db_reporting import Reporting
 
 
 def main():
+    
+    if os.getcwd().endswith("/main") == True:
+        os.chdir("../")
 
     with open(f"{os.getcwd()}/config.json", mode="r") as f:
         config = json.load(f)
-    
-        # CRUD
-        crud = CRUD(config=config)
-        crud.pipeline()
-        
-        ## read sql
-        df = crud.read(sql_file=config["generic_query"])
 
-        # Reporting
-        ## instantiate
-        rep = Reporting(config=config)
+    # CRUD
+    crud = CRUD(config=config)
+    crud.pipeline()
 
-        ## Fetch a list of participants who are co project directors who worked on projects within a certain state, the state will be provided as a parameter input
-        df_participants = rep.participants(state=['NY','CA'], participants="[Co Project Director]")
+    # Reporting
+    ## instantiate
+    rep = Reporting(config=config)
 
-        ## Aggregate of the total number of supplements given per year
-        df_supplements = rep.supplements()
+    ## Fetch a list of participants who are co project directors who worked on projects within a certain state, the state will be provided as a parameter input
+    df_participants = rep.participants(state=['NY','CA'], participants="[Co Project Director]")
 
-        # Count of each project per state with aggregated grants for each state
-        df_projects = rep.projects()
+    ## Aggregate of the total number of supplements given per year
+    df_supplements = rep.supplements()
 
+    # Count of each project per state with aggregated grants for each state
+    df_projects = rep.projects()
 
 
 if __name__ == '__main__':
