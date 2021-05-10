@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import sqlite3
+import logging
+import logging.config
 import json
 import os
 
@@ -8,6 +10,9 @@ import os
 class Reporting():
     
     def __init__(self, config):
+
+        logging.config.fileConfig("logging/logging.conf")
+        self.logger = logging.getLogger("reporting")
         self.config = config
         self.db, self.db_cursor = self.db_connector(db_path=self.config["db_file_loc"])
 
@@ -24,7 +29,8 @@ class Reporting():
         '''Fetch a list of participants who are co project directors who worked on projects within a certain state, the state will be provided as a parameter input'''
 
         # # from sql file
-        # query = open(f"{os.getcwd()}/db/participants.sql", "r").read()
+        # with open (f"{os.getcwd()}/db/participants.sql", "r") as f:
+        #     query = f.read()
         # df = pd.read_sql(query,con=self.db)
 
         states_q_prep = ",".join([f"'{x}'" for x in state])
@@ -59,18 +65,18 @@ class Reporting():
             "InstState":state,
             "Participants": list(set(df["Participants"].to_list()))
         }
-        
-        # write to file
-        with open(f'{os.getcwd()}/output/{self.config["queries"]["Participants"]["name"]}.json', "w") as f:
-            json.dump(jdata, f, indent=4)
-        
-        return df
+
+        self.logger.info("Reporting: Participants")
+
+        return df, jdata
 
 
     def supplements(self):
         '''Aggregate of the total number of supplements given per year'''
 
-        query = open(f"{os.getcwd()}/db/supplements.sql", "r").read()
+        with open (f"{os.getcwd()}/db/supplements.sql", "r") as f:
+            query = f.read()
+        #query = '''SELECT Supplements FROM GRANTS WHERE Supplements != '' '''
         df = pd.read_sql(query,con=self.db)
 
         df = df["Supplements"].str.split(";", expand=True)
@@ -96,17 +102,17 @@ class Reporting():
         # json/dict prep
         jdata = {"TotalAmountSupplementsPerYear": pd.Series(df["Amount"].values, index=df["Year"]).to_dict()}
 
-        # write to file
-        with open(f'{os.getcwd()}/output/{self.config["queries"]["Supplements"]["name"]}.json', "w") as f:
-            json.dump(jdata, f, indent=4)
+        self.logger.info("Reporting: Supplements")
 
-        return df
+        return df, jdata
    
 
     def projects(self):
         '''Count of each project per state with aggregated grants for each state'''
 
-        query = open(f"{os.getcwd()}/db/generic_query.sql", "r").read()
+        with open (f"{os.getcwd()}/db/generic_query.sql", "r") as f:
+            query = f.read()
+
         df = pd.read_sql(query,con=self.db)
 
         # get count of each project per state
@@ -137,8 +143,6 @@ class Reporting():
             }
             jdata.update(temp_dict)
 
-        # write to file
-        with open(f'{os.getcwd()}/output/{self.config["queries"]["Projects"]["name"]}.json', "w") as f:
-            json.dump(jdata, f, indent=4)
-        
-        return df_final
+        self.logger.info("Reporting: projects")
+
+        return df_final, jdata

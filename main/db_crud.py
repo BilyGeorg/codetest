@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import sqlite3
+import logging
+import logging.config
 import json
 import os
 
@@ -8,14 +10,17 @@ import os
 class CRUD():
 
     def __init__(self, config):
+
+        logging.config.fileConfig("logging/logging.conf")
+        self.logger = logging.getLogger("crud")
         self.config = config
         if not os.path.exists(f'{os.getcwd()}{self.config["db_file_loc"]}'):
             # Create new DB
             self.db = sqlite3.connect(f'{os.getcwd()}{self.config["db_file_loc"]}')
-            self.cursor = self.db.cursor()            
+            self.db_cursor = self.db.cursor()            
         else: # Connect to present DB
             self.db, self.db_cursor = self.db_connector(db_path=self.config["db_file_loc"])
-
+     
 
     def db_connector(self, db_path):
         ''' Establish connection with the DB file'''
@@ -39,31 +44,33 @@ class CRUD():
         # Create table
         self.db_cursor.execute(create_table_string)
         self.db.commit()
-    
+        self.logger.info("DB created")
+
 
     def insert(self, df=pd.DataFrame, table_name=str):
         '''Insert-appends table'''
 
-        if len(df)>0:
+        try:
             # Insert data
-            df.to_sql(table_name, self.db, if_exists='append', index = False)          
-        else:
-            print("No data")
-            return None
+            df.to_sql(table_name, self.db, if_exists='append', index = False)
+            self.logger.info("Insert data into DB")
+        except Exception as e:
+            self.logger.error("DB insertion error")
         
     
     def read(self, sql_query=None, sql_file=None):
         '''Reads SQL'''
 
         if sql_file:
-            query = open(f"{os.getcwd()}{sql_file}", "r")
-            df = pd.read_sql(query.read(),con=self.db)
+            with open (f"{os.getcwd()}{sql_file}", "r") as f:
+                query = f.read()
+            df = pd.read_sql(query,con=self.db)
             return df
         elif sql_query:
             df = pd.read_sql(sql_query,con=self.db)
             return df
         else:
-            print("Please parse sql_query or sql_file")
+            self.logger.error("Please parse sql_query or sql_file")
             return None
 
 
@@ -108,7 +115,7 @@ class CRUD():
 
 
     def create_table_sql_string(self, table_name=str, primary_key=str, sqlite_dtypes_map=dict):
-        ''' '''
+        '''Returns SQL string for CREATE TABLE'''
         temp_cols = list()
         for key, value in sqlite_dtypes_map.items():
             if key == primary_key:
@@ -132,9 +139,9 @@ class CRUD():
 
         # Format file
         df = self.format_file(df=df)
-        
+
         if not os.path.exists(f'{os.getcwd()}{self.config["db_file_loc"]}'):
-            print("DB Pipeline")
+            self.logger.info("DB Pipeline") 
             # Generate DB and create table schema
             self.create(df=df, table_name=self.config["table_name"])
  
@@ -146,6 +153,6 @@ class CRUD():
             try:
                 df = self.read(sql_file=self.config["generic_query"])
                 if len(df)>0:
-                    print("Using present DB")
+                    self.logger.info("Using present DB") 
             except: # Insert data
                 self.insert(df=df, table_name=self.config["table_name"])
